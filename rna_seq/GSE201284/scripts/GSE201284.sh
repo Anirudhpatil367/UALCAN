@@ -6,13 +6,13 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=33G
 #SBATCH --time=6-06:00:00
-#SBATCH --output=/home/apatil3/cancer/datasets/GSE201284/scripts/GSE201284_%j.out
-#SBATCH --error=/home/apatil3/cancer/datasets/GSE201284/scripts/GSE201284_%j.err
+#SBATCH --output=your_path_here/GSE201284_%j.out
+#SBATCH --error=your_path_here/GSE201284_%j.err
 
 set -euo pipefail
 
-PROJECT_ROOT="/home/apatil3/cancer/datasets/GSE201284"
-PYTHON="/home/apatil3/miniconda3/envs/genecorr/bin/python"
+PROJECT_ROOT="your input path here"
+PYTHON="python env path here"
 
 export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 export OPENBLAS_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
